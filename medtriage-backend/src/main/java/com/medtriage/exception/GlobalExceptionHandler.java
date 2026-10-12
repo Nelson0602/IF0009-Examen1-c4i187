@@ -8,11 +8,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.net.URI;
 import java.time.Instant;
 
-// Manejador central de errores que responde con el formato RFC 7807
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    // Reglas de negocio incumplidas: respuesta 400
+    // Reglas de negocio
     @ExceptionHandler(IllegalArgumentException.class)
     public ProblemDetail handleIllegalArgument(IllegalArgumentException ex) {
         ProblemDetail problem = ProblemDetail.forStatusAndDetail(
@@ -23,7 +22,7 @@ public class GlobalExceptionHandler {
         return problem;
     }
 
-    // Recursos que no existen: respuesta 404
+    // Recursos que no existen
     @ExceptionHandler(RuntimeException.class)
     public ProblemDetail handleRuntime(RuntimeException ex) {
         ProblemDetail problem = ProblemDetail.forStatusAndDetail(

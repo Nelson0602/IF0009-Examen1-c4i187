@@ -2,7 +2,7 @@ package com.medtriage.dto;
 
 import java.math.BigDecimal;
 
-// DTO de entrada: lo que Angular envía al registrar una cita nueva
+// DTO de entrada
 public class CrearCitaDTO {
 
     private Long pacienteId;

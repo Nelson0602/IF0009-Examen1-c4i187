@@ -3,7 +3,7 @@ package com.medtriage.dto;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-// DTO de salida: lo que Angular muestra en la tabla de citas
+// DTO de salida
 public class CitaMedicaDTO {
 
     private Long id;

@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-// Entidad que representa a un doctor del centro de salud
+// Entidad que representa a un doctor
 @Entity
 @Table(name = "doctor")
 public class Doctor {
